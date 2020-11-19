@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "run-p bs watch:ejs",
+    "postinstall": "ejs-cli --base-dir src '*.ejs' --out dist/",
     "ejs": "ejs-cli --base-dir src '*.ejs' --out dist/",
     "watch:ejs": "watch 'npm run ejs' src",
     "bs": "browser-sync start --server 'dist' --files='dist/*.html' --port 10000 --ui-port 10001"
